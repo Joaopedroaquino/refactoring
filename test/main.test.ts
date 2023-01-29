@@ -29,6 +29,20 @@ test("Deve fazer uma corrida em um dia de semana a noite", function () {
     expect(fare).toBe(39);
 
 });
+test("Deve fazer uma corrida em um domingo e em um horario normal", function () {
+    //given, arrange
+    const segments = [
+        {
+            dist: 10,
+            ds: new Date("2021-03-07T10:00:00")
+        }
+    ];
+    //when, act
+    const fare = calc(segments);
+    //then, assert
+    expect(fare).toBe(29);
+
+});
 
 
 
