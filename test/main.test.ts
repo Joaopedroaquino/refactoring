@@ -5,7 +5,7 @@ test("Deve fazer uma corrida em um dia de semana e em horario normal", function 
     const segments = [
         {
             distance: 10,
-            ds: new Date("2021-03-10T10:00:00")
+            date: new Date("2021-03-10T10:00:00")
         }
     ];
     //when, act
@@ -20,7 +20,7 @@ test("Deve fazer uma corrida em um dia de semana a noite", function () {
     const segments = [
         {
             distance: 10,
-            ds: new Date("2021-03-10T23:00:00")
+            date: new Date("2021-03-10T23:00:00")
         }
     ];
     //when, act
@@ -34,7 +34,7 @@ test("Deve fazer uma corrida em um domingo e em um horario normal", function () 
     const segments = [
         {
             distance: 10,
-            ds: new Date("2021-03-07T10:00:00")
+            date: new Date("2021-03-07T10:00:00")
         }
     ];
     //when, act
@@ -49,7 +49,7 @@ test("Deve fazer uma corrida em um domingo e em um horario noturno", function ()
     const segments = [
         {
             distance: 10,
-            ds: new Date("2021-03-07T23:00:00")
+            date: new Date("2021-03-07T23:00:00")
         }
     ];
     //when, act
@@ -64,7 +64,7 @@ test("Deve retornar -1 se a distancia for invalida", function () {
     const segments = [
         {
             distance: -10,
-            ds: new Date("2021-03-07T23:00:00")
+            date: new Date("2021-03-07T23:00:00")
         }
     ];
     //when, act
@@ -78,7 +78,7 @@ test("Deve retornar -2 se a data for invalida", function () {
     const segments = [
         {
             distance: 10,
-            ds: new Date("invalid date")
+            date: new Date("invalid date")
         }
     ];
     //when, act
@@ -92,7 +92,7 @@ test("Deve fazer uma corrida com valor minimo", function () {
     const segments = [
         {
             distance: 1,
-            ds: new Date("2021-03-07T23:00:00")
+            date: new Date("2021-03-07T23:00:00")
         }
     ];
     //when, act
