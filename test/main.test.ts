@@ -87,6 +87,20 @@ test("Deve retornar -2 se a data for invalida", function () {
     expect(fare).toBe(-2);
 
 });
+test("Deve fazer uma corrida com valor minimo", function () {
+    //given, arrange
+    const segments = [
+        {
+            dist: 1,
+            ds: new Date("2021-03-07T23:00:00")
+        }
+    ];
+    //when, act
+    const fare = calc(segments);
+    //then, assert
+    expect(fare).toBe(10);
+
+});
 
 
 
