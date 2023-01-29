@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1674958129500" clover="3.2.0">
-  <project timestamp="1674958129500" name="All files">
+<coverage generated="1674958480678" clover="3.2.0">
+  <project timestamp="1674958480678" name="All files">
     <metrics statements="17" coveredstatements="17" conditionals="22" coveredconditionals="22" methods="1" coveredmethods="1" elements="40" coveredelements="40" complexity="0" loc="17" ncloc="17" packages="1" files="1" classes="1"/>
     <file name="main.ts" path="/home/latitude/Documentos/clean-code-e-clean-arch/refactoring/src/main.ts">
       <metrics statements="17" coveredstatements="17" conditionals="22" coveredconditionals="22" methods="1" coveredmethods="1"/>
