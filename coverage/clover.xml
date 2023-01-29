@@ -1,26 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1674959274019" clover="3.2.0">
-  <project timestamp="1674959274019" name="All files">
-    <metrics statements="17" coveredstatements="17" conditionals="22" coveredconditionals="22" methods="1" coveredmethods="1" elements="40" coveredelements="40" complexity="0" loc="17" ncloc="17" packages="1" files="1" classes="1"/>
+<coverage generated="1675025279065" clover="3.2.0">
+  <project timestamp="1675025279065" name="All files">
+    <metrics statements="19" coveredstatements="19" conditionals="22" coveredconditionals="22" methods="2" coveredmethods="2" elements="43" coveredelements="43" complexity="0" loc="19" ncloc="19" packages="1" files="1" classes="1"/>
     <file name="main.ts" path="/home/latitude/Documentos/clean-code-e-clean-arch/refactoring/src/main.ts">
-      <metrics statements="17" coveredstatements="17" conditionals="22" coveredconditionals="22" methods="1" coveredmethods="1"/>
-      <line num="3" count="1" type="stmt"/>
-      <line num="4" count="7" type="stmt"/>
-      <line num="5" count="7" type="stmt"/>
-      <line num="6" count="7" type="cond" truecount="6" falsecount="0"/>
-      <line num="7" count="6" type="cond" truecount="6" falsecount="0"/>
-      <line num="9" count="5" type="cond" truecount="4" falsecount="0"/>
-      <line num="11" count="3" type="cond" truecount="2" falsecount="0"/>
-      <line num="12" count="1" type="stmt"/>
-      <line num="15" count="2" type="stmt"/>
-      <line num="19" count="2" type="cond" truecount="2" falsecount="0"/>
-      <line num="20" count="1" type="stmt"/>
+      <metrics statements="19" coveredstatements="19" conditionals="22" coveredconditionals="22" methods="2" coveredmethods="2"/>
+      <line num="3" count="2" type="stmt"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="6" count="7" type="stmt"/>
+      <line num="7" count="7" type="stmt"/>
+      <line num="8" count="7" type="cond" truecount="6" falsecount="0"/>
+      <line num="9" count="6" type="cond" truecount="6" falsecount="0"/>
+      <line num="10" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="11" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="13" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="14" count="1" type="stmt"/>
+      <line num="17" count="2" type="stmt"/>
+      <line num="21" count="2" type="cond" truecount="2" falsecount="0"/>
       <line num="22" count="1" type="stmt"/>
-      <line num="27" count="1" type="stmt"/>
-      <line num="31" count="1" type="stmt"/>
-      <line num="34" count="5" type="cond" truecount="2" falsecount="0"/>
-      <line num="35" count="1" type="stmt"/>
-      <line num="37" count="4" type="stmt"/>
+      <line num="24" count="1" type="stmt"/>
+      <line num="29" count="1" type="stmt"/>
+      <line num="33" count="1" type="stmt"/>
+      <line num="36" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="37" count="1" type="stmt"/>
+      <line num="39" count="4" type="stmt"/>
     </file>
   </project>
 </coverage>
