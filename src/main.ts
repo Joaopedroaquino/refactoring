@@ -9,12 +9,13 @@ export function calculateRide(segments) {
 			if (segment.date != null && segment.date != undefined && segment.date instanceof Date && segment.date.toString() !== "Invalid Date") {
 				const overnight = segment.date.getHours() >= 22 || segment.date.getHours() <= 6
 				if (overnight) {
-					// not sunday
-					if (segment.date.getDay() !== 0) {
-						fare += segment.distance * 3.90;
+					if (isSunday(segment.date)) {
+						fare += segment.distance * 5;
+
 						// sunday
 					} else {
-						fare += segment.distance * 5;
+						fare += segment.distance * 3.90;
+
 					}
 				} else {
 					// sunday
