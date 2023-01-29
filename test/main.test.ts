@@ -73,6 +73,20 @@ test("Deve retornar -1 se a distancia for invalida", function () {
     expect(fare).toBe(-1);
 
 });
+test("Deve retornar -2 se a data for invalida", function () {
+    //given, arrange
+    const segments = [
+        {
+            dist: 10,
+            ds: new Date("invalid date")
+        }
+    ];
+    //when, act
+    const fare = calc(segments);
+    //then, assert
+    expect(fare).toBe(-2);
+
+});
 
 
 
