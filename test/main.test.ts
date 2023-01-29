@@ -59,6 +59,21 @@ test("Deve fazer uma corrida em um domingo e em um horario noturno", function ()
 
 });
 
+test("Deve retornar -1 se a distancia for invalida", function () {
+    //given, arrange
+    const segments = [
+        {
+            dist: -10,
+            ds: new Date("2021-03-07T23:00:00")
+        }
+    ];
+    //when, act
+    const fare = calc(segments);
+    //then, assert
+    expect(fare).toBe(-1);
+
+});
+
 
 
 
