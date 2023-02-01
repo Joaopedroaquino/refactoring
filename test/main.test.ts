@@ -55,7 +55,7 @@ test("Deve retornar -1 se a distancia for invalida", function () {
         }
     ];
     const fare = calculateRide(segments);
-    expect(fare).toBe(-1);
+    expect(()=> calculateRide(segments)).toThrow(new Error('Invalid distance'))
 
 });
 test("Deve retornar -2 se a data for invalida", function () {

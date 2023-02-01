@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1675211080986" clover="3.2.0">
-  <project timestamp="1675211080986" name="All files">
+<coverage generated="1675211513279" clover="3.2.0">
+  <project timestamp="1675211513279" name="All files">
     <metrics statements="25" coveredstatements="25" conditionals="26" coveredconditionals="26" methods="5" coveredmethods="5" elements="56" coveredelements="56" complexity="0" loc="25" ncloc="25" packages="1" files="1" classes="1"/>
     <file name="main.ts" path="/home/latitude/Documentos/clean-code-e-clean-arch/refactoring/src/main.ts">
       <metrics statements="25" coveredstatements="25" conditionals="26" coveredconditionals="26" methods="5" coveredmethods="5"/>
@@ -19,16 +19,16 @@
       <line num="22" count="7" type="stmt"/>
       <line num="23" count="7" type="stmt"/>
       <line num="24" count="7" type="cond" truecount="1" falsecount="0"/>
-      <line num="25" count="6" type="cond" truecount="1" falsecount="0"/>
-      <line num="26" count="5" type="cond" truecount="3" falsecount="0"/>
-      <line num="27" count="2" type="stmt"/>
-      <line num="29" count="5" type="cond" truecount="3" falsecount="0"/>
-      <line num="30" count="1" type="stmt"/>
-      <line num="32" count="5" type="cond" truecount="3" falsecount="0"/>
-      <line num="33" count="1" type="stmt"/>
-      <line num="35" count="5" type="cond" truecount="3" falsecount="0"/>
-      <line num="36" count="1" type="stmt"/>
-      <line num="39" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="26" count="6" type="cond" truecount="1" falsecount="0"/>
+      <line num="27" count="5" type="cond" truecount="3" falsecount="0"/>
+      <line num="28" count="2" type="stmt"/>
+      <line num="30" count="5" type="cond" truecount="3" falsecount="0"/>
+      <line num="31" count="1" type="stmt"/>
+      <line num="33" count="5" type="cond" truecount="3" falsecount="0"/>
+      <line num="34" count="1" type="stmt"/>
+      <line num="36" count="5" type="cond" truecount="3" falsecount="0"/>
+      <line num="37" count="1" type="stmt"/>
+      <line num="40" count="5" type="cond" truecount="2" falsecount="0"/>
     </file>
   </project>
 </coverage>
