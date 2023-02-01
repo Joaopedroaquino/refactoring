@@ -45,3 +45,4 @@ export function calc (movArray) {
 	} else {
 		return result;
 	}
+}
