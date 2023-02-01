@@ -25,14 +25,14 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>22/22</span>
+                <span class='fraction'>20/20</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>28/28</span>
+                <span class='fraction'>26/26</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>22/22</span>
+                <span class='fraction'>18/18</span>
             </div>
         
             
@@ -99,12 +99,7 @@
 <a name='L34'></a><a href='#L34'>34</a>
 <a name='L35'></a><a href='#L35'>35</a>
 <a name='L36'></a><a href='#L36'>36</a>
-<a name='L37'></a><a href='#L37'>37</a>
-<a name='L38'></a><a href='#L38'>38</a>
-<a name='L39'></a><a href='#L39'>39</a>
-<a name='L40'></a><a href='#L40'>40</a>
-<a name='L41'></a><a href='#L41'>41</a>
-<a name='L42'></a><a href='#L42'>42</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L37'></a><a href='#L37'>37</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">10x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -125,25 +120,20 @@
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// @ts-nocheck
 function isSunday(date) {
@@ -153,39 +143,34 @@ function isOvernight(date) {
 	return date.getHours() &gt;= 22 || date.getHours() &lt;= 6
 &nbsp;
 }
-function isValidDistance(distance){
+function isValidDistance(distance) {
 	return distance != null &amp;&amp; distance != undefined &amp;&amp; typeof distance === "number" &amp;&amp; distance &gt; 0
 }
-function isValidDate(date){
+function isValidDate(date) {
 	return date != null &amp;&amp; date != undefined &amp;&amp; date instanceof Date &amp;&amp; date.toString() !== "Invalid Date"
 }
 export function calculateRide(segments) {
 	let fare = 0;
 	for (const segment of segments) {
-		if (isValidDistance(segment.distance)) {
-			if (isValidDate(segment.date)) {
-				if (isOvernight(segment.date) &amp;&amp; isSunday(segment.date)) {
-					fare += segment.distance * 5;}
-				if (isOvernight(segment.date) &amp;&amp; !isSunday(segment.date)) {
-					fare += segment.distance * 3.90;}
-			    if (!isOvernight(segment.date) &amp;&amp; isSunday(segment.date)) {
-				fare += segment.distance * 2.9;} 
-				 if (!isOvernight(segment.date) &amp;&amp; !isSunday(segment.date)) {
-				fare += segment.distance * 2.10;
-			}
-		
-	} else {
-		return -2;
+		if (!isValidDistance(segment.distance)) return -1;
+		if (!isValidDate(segment.date)) return -2;
+		if (isOvernight(segment.date) &amp;&amp; isSunday(segment.date)) {
+			fare += segment.distance * 5;
+		}
+		if (isOvernight(segment.date) &amp;&amp; !isSunday(segment.date)) {
+			fare += segment.distance * 3.90;
+		}
+		if (!isOvernight(segment.date) &amp;&amp; isSunday(segment.date)) {
+			fare += segment.distance * 2.9;
+		}
+		if (!isOvernight(segment.date) &amp;&amp; !isSunday(segment.date)) {
+			fare += segment.distance * 2.10;
+		}
+&nbsp;
 	}
-} else {
-	return -1;
-}
-	}
-if (fare &lt; 10) {
-	return 10;
-} else {
-	return fare;
-}
+&nbsp;
+	return (fare &lt; 10) ? 10 : fare;
+&nbsp;
 }</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -193,7 +178,7 @@ if (fare &lt; 10) {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-01-31T23:53:05.931Z
+                at 2023-02-01T00:01:52.969Z
             </div>
         <script src="prettify.js"></script>
         <script>

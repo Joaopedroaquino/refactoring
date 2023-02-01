@@ -16,28 +16,22 @@ export function calculateRide(segments) {
 	let fare = 0;
 	for (const segment of segments) {
 		if (!isValidDistance(segment.distance)) return -1;
-		if (isValidDate(segment.date)) {
-			if (isOvernight(segment.date) && isSunday(segment.date)) {
-				fare += segment.distance * 5;
-			}
-			if (isOvernight(segment.date) && !isSunday(segment.date)) {
-				fare += segment.distance * 3.90;
-			}
-			if (!isOvernight(segment.date) && isSunday(segment.date)) {
-				fare += segment.distance * 2.9;
-			}
-			if (!isOvernight(segment.date) && !isSunday(segment.date)) {
-				fare += segment.distance * 2.10;
-			}
-
-		} else {
-			return -2;
+		if (!isValidDate(segment.date)) return -2;
+		if (isOvernight(segment.date) && isSunday(segment.date)) {
+			fare += segment.distance * 5;
+		}
+		if (isOvernight(segment.date) && !isSunday(segment.date)) {
+			fare += segment.distance * 3.90;
+		}
+		if (!isOvernight(segment.date) && isSunday(segment.date)) {
+			fare += segment.distance * 2.9;
+		}
+		if (!isOvernight(segment.date) && !isSunday(segment.date)) {
+			fare += segment.distance * 2.10;
 		}
 
 	}
-	if (fare < 10) {
-		return 10;
-	} else {
-		return fare;
-	}
+
+	return (fare < 10) ? 10 : fare;
+
 }
