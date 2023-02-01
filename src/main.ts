@@ -1,17 +1,16 @@
-// @ts-nocheck
-function isSunday(date) {
+function isSunday(date: Date) {
 	return date.getDay() === 0
 }
-function isOvernight(date) {
+function isOvernight(date:Date) {
 	return date.getHours() >= 22 || date.getHours() <= 6
 }
-function isValidDistance(distance) {
+function isValidDistance(distance: number) {
 	return distance != null && distance != undefined && typeof distance === "number" && distance > 0
 }
-function isValidDate(date) {
+function isValidDate(date:Date) {
 	return date != null && date != undefined && date instanceof Date && date.toString() !== "Invalid Date"
 }
-export function calculateRide(segments) {
+export function calculateRide(segments: any[]) {
 	let fare = 0;
 	for (const segment of segments) {
 		if (!isValidDistance(segment.distance)) return -1;
