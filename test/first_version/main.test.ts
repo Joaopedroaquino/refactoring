@@ -1,4 +1,4 @@
-import { calculateRide } from "../src/main";
+import { calculateRide } from "../../src/main";
 
 test("Deve fazer uma corrida em um dia de semana e em horario normal", function () {
     const segments = [

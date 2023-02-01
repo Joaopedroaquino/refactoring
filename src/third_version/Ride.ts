@@ -4,5 +4,14 @@ export default class Ride {
     constructor(){
         this.segments = [];
     }
+  
+    addSegment(distance: number, date: Date){
+        this.segments.push(new Segment(distance, date))
+
+    }
+
+    calculateFare(){
+        
+    }
 
 }
