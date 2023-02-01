@@ -1,3 +1,5 @@
+import Segment from "./Segment";
+
 export default class Ride {
     segments: Segment[];
 
