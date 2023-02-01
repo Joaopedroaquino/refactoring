@@ -4,7 +4,6 @@ function isSunday(date) {
 }
 function isOvernight(date) {
 	return date.getHours() >= 22 || date.getHours() <= 6
-
 }
 function isValidDistance(distance) {
 	return distance != null && distance != undefined && typeof distance === "number" && distance > 0
@@ -29,9 +28,6 @@ export function calculateRide(segments) {
 		if (!isOvernight(segment.date) && !isSunday(segment.date)) {
 			fare += segment.distance * 2.10;
 		}
-
 	}
-
 	return (fare < 10) ? 10 : fare;
-
 }
