@@ -54,7 +54,7 @@ test("Deve retornar -1 se a distancia for invalida", function () {
             date: new Date("2021-03-07T23:00:00")
         }
     ];
-    const fare = calculateRide(segments);
+  ///  const fare = calculateRide(segments);
     expect(()=> calculateRide(segments)).toThrow(new Error('Invalid distance'))
 
 });
@@ -65,8 +65,8 @@ test("Deve retornar -2 se a data for invalida", function () {
             date: new Date("invalid date")
         }
     ];
-    const fare = calculateRide(segments);
-    expect(fare).toBe(-2);
+   // const fare = calculateRide(segments);
+    expect(()=> calculateRide(segments)).toThrow(new Error('Invalid date'));
 
 });
 test("Deve fazer uma corrida com valor minimo", function () {
