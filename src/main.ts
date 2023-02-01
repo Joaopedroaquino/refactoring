@@ -3,8 +3,6 @@ const OVERNIGHT_FARE = 3.90;
 const SUNDAY_FARE = 2.9;
 const NORMAL_FARE = 2.1;
 const MIN_FARE = 10;
-const INVALID_DISTANCE = -1;
-const INVALID_DATE = -2;
 
 function isSunday(date: Date) {
 	return date.getDay() === 0;
