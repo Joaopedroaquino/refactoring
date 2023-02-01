@@ -1,7 +1,7 @@
 const SUNDAY_OVERNIGHT_FARE = 5;
 const OVERNIGHT_FARE = 3.90;
 const SUNDAY_FARE = 2.9;
-const NORMAL_FARE = 2;
+const NORMAL_FARE = 2.1;
 
 
 
