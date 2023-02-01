@@ -1,8 +1,8 @@
 function isSunday(date: Date) {
-	return date.getDay() === 0
+	return date.getDay() === 0;
 }
 function isOvernight(date:Date) {
-	return date.getHours() >= 22 || date.getHours() <= 6
+	return date.getHours() >= 22 || date.getHours() <= 6;
 }
 function isValidDistance(distance: number) {
 	return distance != null && distance != undefined && typeof distance === "number" && distance > 0
