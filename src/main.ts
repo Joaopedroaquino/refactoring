@@ -2,6 +2,8 @@ const SUNDAY_OVERNIGHT_FARE = 5;
 const OVERNIGHT_FARE = 3.90;
 const SUNDAY_FARE = 2.9;
 const NORMAL_FARE = 2.1;
+const MIN_FARE = 10;
+
 
 
 
@@ -35,5 +37,5 @@ export function calculateRide(segments: any[]) {
 			fare += segment.distance * NORMAL_FARE;
 		}
 	}
-	return (fare < 10) ? 10 : fare;
+	return (fare < MIN_FARE) ? MIN_FARE : fare;
 }
