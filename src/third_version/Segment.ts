@@ -11,6 +11,13 @@ export default class Segment {
         return date != null && date != undefined && date instanceof Date && date.toString() !== "Invalid Date"
     }
 
+     isSunday(date: Date) {
+        return date.getDay() === 0;
+    }
+    function isOvernight(date:Date) {
+        return date.getHours() >= 22 || date.getHours() <= 6;
+    }
+
 
 
 }
