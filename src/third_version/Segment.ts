@@ -14,8 +14,8 @@ export default class Segment {
      isSunday() {
         return this.date.getDay() === 0;
     }
-     isOvernight(date:Date) {
-        return date.getHours() >= 22 || date.getHours() <= 6;
+     isOvernight() {
+        return this.date.getHours() >= 22 || this.date.getHours() <= 6;
     }
 
 
