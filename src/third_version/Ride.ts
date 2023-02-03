@@ -1,5 +1,4 @@
 import Segment from "./Segment";
-
 export default class Ride {
     SUNDAY_OVERNIGHT_FARE = 5;
     OVERNIGHT_FARE = 3.90;
@@ -11,12 +10,10 @@ export default class Ride {
     constructor() {
         this.segments = [];
     }
-
     addSegment(distance: number, date: Date) {
         this.segments.push(new Segment(distance, date))
 
     }
-
     calculateFare() {
         let fare = 0;
         for (const segment of this.segments) {
@@ -35,5 +32,4 @@ export default class Ride {
         }
         return (fare < this.MIN_FARE) ? this.MIN_FARE : fare;
     }
-
 }
