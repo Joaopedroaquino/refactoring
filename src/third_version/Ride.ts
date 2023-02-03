@@ -14,7 +14,7 @@ export default class Ride {
 
     calculateFare(){
         let fare = 0;
-	for (const segment of segments) {
+	for (const segment of this.segments) {
 		if (!isValidDistance(segment.distance)) throw new Error('Invalid distance');
 		if (!isValidDate(segment.date)) throw new Error('Invalid date')
 		if (isOvernight(segment.date) && isSunday(segment.date)) {
