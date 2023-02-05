@@ -5,7 +5,7 @@ export default class Ride {
     SUNDAY_FARE = 2.9;
     NORMAL_FARE = 2.1;
     MIN_FARE = 10;
-    PEAK_TIME = 6;
+    PEAK_TIME_FARE = 6;
 
     segments: Segment[];
 
@@ -18,8 +18,8 @@ export default class Ride {
     calculateFare() {
         let fare = 0;
         for (const segment of this.segments) {
-            if((segment.date.getHours()>= 7 && segment.date.getHours() <= 8) ||(segment.date.getHours()>= 18 && segment.date.getHours() <= 19)  ){
-                fare += segment.distance * this.PEAK_TIME;
+            if(segment.isPeakTime() ){
+                fare += segment.distance * this.PEAK_TIME_FARE;
                 continue;
             }
             if (segment.isOvernight() && segment.isSunday()) {
