@@ -29,6 +29,13 @@ test("Deve fazer uma corrida em um domingo e em horario noturno", function () {
     expect(fare).toBe(50);
 
 });
+test("Deve fazer uma corrida em horario de pico (7-8 e das 18-19)", function () {
+    const ride = new Ride();
+    ride.addSegment( 10, new Date("2021-03-10T07:30:00"));
+   const fare = ride.calculateFare();
+    expect(fare).toBe(60);
+
+});
 
 
 
