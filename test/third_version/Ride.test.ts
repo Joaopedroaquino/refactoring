@@ -1,9 +1,19 @@
+import NormalFareCalculatorHandler from "../../src/third_version/NormalFareCalculatorHandler";
+import OvernightFareCalculatorHandler from "../../src/third_version/OvernightFareCalculatorHandler";
+import OvernightSundayFareCalculatorHandler from "../../src/third_version/OvernightSundayFareCalculatorHandler";
+import PeakTimeFareCalculatorHandler from "../../src/third_version/PeakTimeFareCalculatorHandler";
 import Ride from "../../src/third_version/Ride";
+import SundayFareCalculatorHandler from "../../src/third_version/SundayFareCalculatorHandler";
 
 let ride: Ride;
 
 beforeEach(function(){
-    ride = new Ride;
+    const normal = new NormalFareCalculatorHandler();
+    const overnightSunday = new OvernightSundayFareCalculatorHandler(normal);
+    const overnight = new OvernightFareCalculatorHandler(overnightSunday);
+    const sunday = new SundayFareCalculatorHandler(overnight);
+    const peakTime = new PeakTimeFareCalculatorHandler(sunday);
+    ride = new Ride(peakTime);
 });
 
 test("Deve fazer uma corrida em um dia de semana e em horario normal", function () {
@@ -50,7 +60,6 @@ test("Deve lançar um erro se a data for invalida", function () {
 
 });
 test("Deve fazer uma corrida com valor minimo", function () {
-    const ride = new Ride()
     ride.addSegment(1, new Date("2021-03-07T23:00:00"));
     const fare = ride.calculateFare();
     expect(fare).toBe(10);
