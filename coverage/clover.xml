@@ -1,33 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1675876131118" clover="3.2.0">
-  <project timestamp="1675876131118" name="All files">
-    <metrics statements="33" coveredstatements="33" conditionals="31" coveredconditionals="31" methods="9" coveredmethods="9" elements="73" coveredelements="73" complexity="0" loc="33" ncloc="33" packages="1" files="2" classes="2"/>
+<coverage generated="1675878358152" clover="3.2.0">
+  <project timestamp="1675878358152" name="All files">
+    <metrics statements="53" coveredstatements="53" conditionals="31" coveredconditionals="31" methods="19" coveredmethods="19" elements="103" coveredelements="103" complexity="0" loc="53" ncloc="53" packages="1" files="7" classes="7"/>
+    <file name="NormalFareCalculator.ts" path="/home/latitude/Documentos/clean-code-e-clean-arch/refactoring/src/third_version/NormalFareCalculator.ts">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="7" count="1" type="stmt"/>
+    </file>
+    <file name="OvernightFareCalculator.ts" path="/home/latitude/Documentos/clean-code-e-clean-arch/refactoring/src/third_version/OvernightFareCalculator.ts">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="7" count="1" type="stmt"/>
+    </file>
+    <file name="PeakTimeFareCalculator.ts" path="/home/latitude/Documentos/clean-code-e-clean-arch/refactoring/src/third_version/PeakTimeFareCalculator.ts">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="5" count="4" type="stmt"/>
+      <line num="7" count="4" type="stmt"/>
+    </file>
     <file name="Ride.ts" path="/home/latitude/Documentos/clean-code-e-clean-arch/refactoring/src/third_version/Ride.ts">
-      <metrics statements="24" coveredstatements="24" conditionals="15" coveredconditionals="15" methods="3" coveredmethods="3"/>
+      <metrics statements="29" coveredstatements="29" conditionals="15" coveredconditionals="15" methods="3" coveredmethods="3"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
-      <line num="3" count="11" type="stmt"/>
-      <line num="4" count="11" type="stmt"/>
-      <line num="5" count="11" type="stmt"/>
-      <line num="6" count="11" type="stmt"/>
-      <line num="7" count="11" type="stmt"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="7" count="1" type="stmt"/>
       <line num="8" count="11" type="stmt"/>
-      <line num="13" count="11" type="stmt"/>
-      <line num="16" count="11" type="stmt"/>
-      <line num="19" count="9" type="stmt"/>
+      <line num="14" count="11" type="stmt"/>
+      <line num="17" count="11" type="stmt"/>
       <line num="20" count="9" type="stmt"/>
-      <line num="21" count="9" type="cond" truecount="1" falsecount="0"/>
-      <line num="22" count="4" type="stmt"/>
+      <line num="21" count="9" type="stmt"/>
+      <line num="22" count="9" type="cond" truecount="1" falsecount="0"/>
       <line num="23" count="4" type="stmt"/>
-      <line num="25" count="5" type="cond" truecount="3" falsecount="0"/>
-      <line num="26" count="2" type="stmt"/>
-      <line num="28" count="5" type="cond" truecount="3" falsecount="0"/>
-      <line num="29" count="1" type="stmt"/>
+      <line num="24" count="4" type="stmt"/>
+      <line num="25" count="4" type="stmt"/>
+      <line num="27" count="5" type="cond" truecount="3" falsecount="0"/>
+      <line num="28" count="2" type="stmt"/>
+      <line num="29" count="2" type="stmt"/>
       <line num="31" count="5" type="cond" truecount="3" falsecount="0"/>
       <line num="32" count="1" type="stmt"/>
-      <line num="34" count="5" type="cond" truecount="3" falsecount="0"/>
-      <line num="35" count="1" type="stmt"/>
-      <line num="38" count="9" type="cond" truecount="2" falsecount="0"/>
+      <line num="33" count="1" type="stmt"/>
+      <line num="35" count="5" type="cond" truecount="3" falsecount="0"/>
+      <line num="36" count="1" type="stmt"/>
+      <line num="37" count="1" type="stmt"/>
+      <line num="39" count="5" type="cond" truecount="3" falsecount="0"/>
+      <line num="40" count="1" type="stmt"/>
+      <line num="41" count="1" type="stmt"/>
+      <line num="44" count="9" type="cond" truecount="2" falsecount="0"/>
     </file>
     <file name="Segment.ts" path="/home/latitude/Documentos/clean-code-e-clean-arch/refactoring/src/third_version/Segment.ts">
       <metrics statements="9" coveredstatements="9" conditionals="16" coveredconditionals="16" methods="6" coveredmethods="6"/>
@@ -40,6 +63,18 @@
       <line num="13" count="10" type="stmt"/>
       <line num="16" count="20" type="cond" truecount="2" falsecount="0"/>
       <line num="20" count="9" type="cond" truecount="4" falsecount="0"/>
+    </file>
+    <file name="SundayFareCalculator.ts" path="/home/latitude/Documentos/clean-code-e-clean-arch/refactoring/src/third_version/SundayFareCalculator.ts">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="7" count="1" type="stmt"/>
+    </file>
+    <file name="SundayOvernightFareCalculator.ts" path="/home/latitude/Documentos/clean-code-e-clean-arch/refactoring/src/third_version/SundayOvernightFareCalculator.ts">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="5" count="2" type="stmt"/>
+      <line num="7" count="2" type="stmt"/>
     </file>
   </project>
 </coverage>

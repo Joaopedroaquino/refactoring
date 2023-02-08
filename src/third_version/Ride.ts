@@ -1,14 +1,12 @@
+import NormalFareCalculator from "./NormalFareCalculator";
+import OvernightFareCalculator from "./OvernightFareCalculator";
+import PeakTimeFareCalculator from "./PeakTimeFareCalculator";
 import Segment from "./Segment";
+import SundayFareCalculator from "./SundayFareCalculator";
+import SundayOvernightFareCalculator from "./SundayOvernightFareCalculator";
 export default class Ride {
-    SUNDAY_OVERNIGHT_FARE = 5;
-    OVERNIGHT_FARE = 3.90;
-    SUNDAY_FARE = 2.9;
-    NORMAL_FARE = 2.1;
     MIN_FARE = 10;
-    PEAK_TIME_FARE = 6;
-
     segments: Segment[];
-
     constructor() {
         this.segments = [];
     }
@@ -18,21 +16,26 @@ export default class Ride {
     calculateFare() {
         let fare = 0;
         for (const segment of this.segments) {
-            if(segment.isPeakTime() ){
-                fare += segment.distance * this.PEAK_TIME_FARE;
+            if (segment.isPeakTime()) {
+                const fareCalculator = new PeakTimeFareCalculator()
+                fare += fareCalculator.calculate(segment)
                 continue;
             }
             if (segment.isOvernight() && segment.isSunday()) {
-                fare += segment.distance * this.SUNDAY_OVERNIGHT_FARE;
+                const fareCalculator = new SundayOvernightFareCalculator()
+                fare += fareCalculator.calculate(segment)
             }
             if (segment.isOvernight() && !segment.isSunday()) {
-                fare += segment.distance * this.OVERNIGHT_FARE;
+                const fareCalculator = new OvernightFareCalculator()
+                fare += fareCalculator.calculate(segment)
             }
             if (!segment.isOvernight() && segment.isSunday()) {
-                fare += segment.distance * this.SUNDAY_FARE;
+                const fareCalculator = new SundayFareCalculator()
+                fare += fareCalculator.calculate(segment)
             }
             if (!segment.isOvernight() && !segment.isSunday()) {
-                fare += segment.distance * this.NORMAL_FARE;
+                const fareCalculator = new NormalFareCalculator()
+                fare += fareCalculator.calculate(segment)
             }
         }
         return (fare < this.MIN_FARE) ? this.MIN_FARE : fare;
