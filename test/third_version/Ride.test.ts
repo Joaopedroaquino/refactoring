@@ -41,6 +41,11 @@ test("Deve lançar um erro se a distancia for invalida", function () {
     expect(()=> ride.addSegment( -10, new Date("2021-03-07T23:00:00"))).toThrow(new Error('Invalid distance'))
 
 });
+test("Deve lançar um erro se a data for invalida", function () {
+    const ride = new Ride();
+    expect(()=> ride.addSegment( 10, new Date("any data"))).toThrow(new Error('Invalid date'))
+
+});
 // test("Deve retornar -2 se a data for invalida", function () {
 //     const segments = [
 //         {
