@@ -36,6 +36,37 @@ test("Deve fazer uma corrida em horario de pico (7-8 e das 18-19)", function () 
     expect(fare).toBe(60);
 
 });
+test("Deve lançar um erro se a distancia for invalida", function () {
+    const ride = new Ride();
+    expect(()=> ride.addSegment( -10, new Date("2021-03-07T23:00:00"))).toThrow(new Error('Invalid distance'))
+
+});
+// test("Deve retornar -2 se a data for invalida", function () {
+//     const segments = [
+//         {
+//             distance: 10,
+//             date: new Date("invalid date")
+//         }
+//     ];
+//    // const fare = calculateRide(segments);
+//     expect(()=> calculateRide(segments)).toThrow(new Error('Invalid date'));
+
+// });
+// test("Deve fazer uma corrida com valor minimo", function () {
+//     //given, arrange
+//     const segments = [
+//         {
+//             distance: 1,
+//             date: new Date("2021-03-07T23:00:00")
+//         }
+//     ];
+//     //when, act
+//     const fare = calculateRide(segments);
+//     //then, assert
+//     expect(fare).toBe(10);
+
+// });
+
 
 
 
