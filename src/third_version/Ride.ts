@@ -1,3 +1,4 @@
+import FareCalculatorFactory from "./FareCalculatorFactory";
 import NormalFareCalculator from "./NormalFareCalculator";
 import OvernightFareCalculator from "./OvernightFareCalculator";
 import PeakTimeFareCalculator from "./PeakTimeFareCalculator";
@@ -16,27 +17,9 @@ export default class Ride {
     calculateFare() {
         let fare = 0;
         for (const segment of this.segments) {
-            if (segment.isPeakTime()) {
-                const fareCalculator = new PeakTimeFareCalculator()
-                fare += fareCalculator.calculate(segment)
-                continue;
-            }
-            if (segment.isOvernight() && segment.isSunday()) {
-                const fareCalculator = new SundayOvernightFareCalculator()
-                fare += fareCalculator.calculate(segment)
-            }
-            if (segment.isOvernight() && !segment.isSunday()) {
-                const fareCalculator = new OvernightFareCalculator()
-                fare += fareCalculator.calculate(segment)
-            }
-            if (!segment.isOvernight() && segment.isSunday()) {
-                const fareCalculator = new SundayFareCalculator()
-                fare += fareCalculator.calculate(segment)
-            }
-            if (!segment.isOvernight() && !segment.isSunday()) {
-                const fareCalculator = new NormalFareCalculator()
-                fare += fareCalculator.calculate(segment)
-            }
+            const fareCalculator = FareCalculatorFactory.create(segment);
+            fare += fareCalculator.calculate(segment)
+
         }
         return (fare < this.MIN_FARE) ? this.MIN_FARE : fare;
     }
