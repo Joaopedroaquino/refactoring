@@ -10,6 +10,7 @@ export default class Ride {
     addSegment(distance: number, date: Date) {
         this.segments.push(new Segment(distance, date))
     }
+    
     calculateFare() {
         let fare = 0;
         for (const segment of this.segments) {

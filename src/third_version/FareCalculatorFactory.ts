@@ -13,7 +13,5 @@ export default class FareCalculatorFactory {
         if (!segment.isOvernight() && segment.isSunday()) return new SundayFareCalculator();
         if (!segment.isOvernight() && !segment.isSunday()) return new NormalFareCalculator();
         throw new Error()
-
-
     }
 }

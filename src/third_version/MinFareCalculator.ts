@@ -6,5 +6,4 @@ export default class MinFareCalculator implements FareCalculator{
     calculate(segment: Segment): number {
         return segment.distance * this.FARE
     }
-    
 }
