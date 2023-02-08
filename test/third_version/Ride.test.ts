@@ -33,7 +33,7 @@ test.each([
     "2021-03-10T07:30:00",
     "2021-03-10T07:00:00",
     "2021-03-10T08:30:00",
-    "2021-03-10T08:00:00"])("Deve fazer uma corrida em horario de pico (7-8 e das 18-19)", function (date) {
+    "2021-03-10T08:00:00"])("Deve fazer uma corrida em horario de pico %p", function (date) {
         const ride = new Ride();
         ride.addSegment(10, new Date(date));
         const fare = ride.calculateFare();
