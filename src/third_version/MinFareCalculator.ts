@@ -1,10 +1,10 @@
 import FareCalculator from "./FareCalculator";
 import Segment from "./Segment";
 
-export default class SundayOvernightFareCalculator implements FareCalculator{
-    FARE = 5;
+export default class MinFareCalculator implements FareCalculator{
+    FARE = 10;
     calculate(segment: Segment): number {
-       return segment.distance * this.FARE
+        return segment.distance * this.FARE
     }
     
 }
