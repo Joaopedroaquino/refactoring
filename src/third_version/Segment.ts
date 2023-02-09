@@ -19,4 +19,7 @@ export default class Segment {
     isPeakTime() {
         return (this.date.getHours()>= 7 && this.date.getHours() <= 8) ||(this.date.getHours()>= 18 && this.date.getHours() <= 19)
     }
+    isFirstDay() {
+        return this.date.getDate() === 1;
+    }
 }

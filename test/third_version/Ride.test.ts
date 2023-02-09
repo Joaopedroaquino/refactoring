@@ -1,3 +1,4 @@
+import FirstDayFareCalculatorHandler from "../../src/third_version/FirstDayFareCalculatorHandler";
 import NormalFareCalculatorHandler from "../../src/third_version/NormalFareCalculatorHandler";
 import OvernightFareCalculatorHandler from "../../src/third_version/OvernightFareCalculatorHandler";
 import OvernightSundayFareCalculatorHandler from "../../src/third_version/OvernightSundayFareCalculatorHandler";
@@ -13,7 +14,8 @@ beforeEach(function(){
     const overnight = new OvernightFareCalculatorHandler(overnightSunday);
     const sunday = new SundayFareCalculatorHandler(overnight);
     const peakTime = new PeakTimeFareCalculatorHandler(sunday);
-    ride = new Ride(peakTime);
+    const firstDay = new FirstDayFareCalculatorHandler(peakTime)
+    ride = new Ride(firstDay);
 });
 
 test("Deve fazer uma corrida em um dia de semana e em horario normal", function () {
@@ -63,6 +65,12 @@ test("Deve fazer uma corrida com valor minimo", function () {
     ride.addSegment(1, new Date("2021-03-07T23:00:00"));
     const fare = ride.calculateFare();
     expect(fare).toBe(10);
+
+});
+test("Deve fazer uma corrida no dia primeiro", function () {
+    ride.addSegment(10, new Date("2021-03-01T10:00:00"));
+    const fare = ride.calculateFare();
+    expect(fare).toBe(100);
 
 });
 
